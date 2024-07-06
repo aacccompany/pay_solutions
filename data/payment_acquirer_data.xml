@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="pay_solutions" model="payment.acquirer">
+            <field name="name">Pay Solutions</field>
+            <field name="image_128" type="base64" file="pay_solutions/static/src/img/logo-paysolutions.png"/>
+            <field name="provider">paysolutions</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="paysolutions_form"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="acquirer_form_pay_solutions" model="ir.ui.view">
+      <field name="name">acquirer.form.pay.solutions</field>
+      <field name="model">payment.acquirer</field>
+      <field name="inherit_id" ref="payment.acquirer_form"/>
+      <field name="arch" type="xml">
+        <xpath expr='//group[@name="acquirer"]' position='inside'>
+          <group attrs="{'invisible': [('provider', '!=', 'paysolutions')]}">
+            <field name="pay_solutions_api_key" attrs="{'required':[('provider', '=', 'paysolutions'), ('state', '!=', 'disabled')]}"/>
+            <field name="pay_solutions_secret_key" attrs="{'required':[('provider', '=', 'paysolutions'), ('state', '!=', 'disabled')]}"/>
+            <field name="pay_solutions_auth_key" attrs="{'required':[('provider', '=', 'paysolutions'), ('state', '!=', 'disabled')]}"/>
+            <field name="pay_solutions_merchant" attrs="{'required':[('provider', '=', 'paysolutions'), ('state', '!=', 'disabled')]}"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
